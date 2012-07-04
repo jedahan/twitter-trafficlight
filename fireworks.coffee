@@ -7,7 +7,7 @@ twit = new twitter {
   access_token_secret: 'ISjmFijrSyLUT7Z3nAQ9qESGW8tM8NtsOTrmvES4'
 }
 
-minutes = 1
+minutes = 0.2
 the_interval = minutes * 60 * 1000
 tweetcount = []
 
@@ -22,6 +22,7 @@ count_tweets = ->
     .verifyCredentials (err, data) ->
       console.log 'ERROR' if err
     .search 'fireworks', {'locations':'-74,40,-73,41'}, (err, data) ->
+      console.log data.results.length
       tweetcount << data.results.length
 
 change_light = ->
