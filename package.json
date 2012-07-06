@@ -1,0 +1,12 @@
+{ "name": "twitter-trafficlight"
+, "version": "0.1.0"
+, "description": "fireworks make the light light up"
+, "author": "Jonathan Dahan <jonathan@jedahan.com>"
+, "dependencies":
+  { "coffee-script": "1.3.x"
+  , "ntwitter": "0.4.x"
+  }
+, "scripts": {
+    "start": "coffee -w fireworks"
+  }
+}
