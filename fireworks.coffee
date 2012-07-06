@@ -12,8 +12,8 @@ the_interval = minutes * 60 * 1000
 tweetcount = []
 
 setInterval ->
-  console.log 'checking tweets'
   count_tweets()
+  console.log "#{tweetcount[tweetcount.length-1]} new tweets"
   change_light()
 , the_interval
 
@@ -22,8 +22,7 @@ count_tweets = ->
     .verifyCredentials (err, data) ->
       console.log 'ERROR' if err
     .search 'fireworks', {'locations':'-74,40,-73,41'}, (err, data) ->
-      console.log data.results.length
-      tweetcount << data.results.length
+      tweetcount.push data.results.length
 
 change_light = ->
   console.log tweetcount
