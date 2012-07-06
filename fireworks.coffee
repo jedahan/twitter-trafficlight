@@ -1,11 +1,6 @@
 twitter = require 'ntwitter'
-
-twit = new twitter {
-  consumer_key: 'TIcyT8z7yV3aeSiGUV0xhg',
-  consumer_secret: 'O67bqFFuJLKoAWGImNKD3jgUzW2RGEiMNHXmSCL8gA',
-  access_token_key: '14417425-u99mAJwnqwxmanRtxNt8uK6lP6uvlQddzpBvJrP3E',
-  access_token_secret: 'ISjmFijrSyLUT7Z3nAQ9qESGW8tM8NtsOTrmvES4'
-}
+config = require './config'
+twit = new twitter config
 
 minutes = 0.2
 the_interval = minutes * 60 * 1000
